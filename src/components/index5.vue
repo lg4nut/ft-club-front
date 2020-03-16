@@ -426,7 +426,7 @@
             fixture_id: 10001,
             league: "英超",
             localteam: "莱斯特城",
-            over_value: "1.97",
+            over_value: "1.93",
             round: "6",
             stage: "测试",
             state: "demo",
