@@ -498,7 +498,7 @@
             fixture_id: 10005,
             league: "英超",
             localteam: "托特纳姆热刺",
-            over_value: "1.97",
+            over_value: "1.94",
             round: "6",
             stage: "测试",
             state: "demo",
