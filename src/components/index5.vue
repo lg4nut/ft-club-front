@@ -475,7 +475,7 @@
             begintime: 1578745800000,
             ft_score: "3-0",
             handicap: "-2.25",
-            home_value: 1.89,
+            home_value: 1.83,
             ht_score: "2-0",
             fixture_id: 10004,
             league: "英超",
