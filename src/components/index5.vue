@@ -1,13 +1,11 @@
 <template>
   <div>
-  <div align="center">
-    <el-form :inline="true" :model="formInline" class="demo-form-inline"  label-width="80px" size="mini">
-      <el-form-item class="el-icon-user">
-        <i class="el-icon-user"></i>
+  <div align="center" class="top">
+    <el-form :inline="true" :model="formInline" class="demo-form-inline"  label-width="100px" size="mini">
+      <i class="el-icon-user"></i><el-form-item>
         <el-input v-model="formInline.user" placeholder="账号/手机号/邮箱"></el-input>
       </el-form-item>
-      <el-form-item label="密码">
-        <i class="el-icon-lock"></i>
+      <i class="el-icon-lock"></i><el-form-item>
         <el-input v-model="formInline.user" placeholder="密码"></el-input>
       </el-form-item>
       <el-form-item>
@@ -15,7 +13,8 @@
       </el-form-item>
     </el-form>
   </div>
-    <div align="center">
+    <el-divider></el-divider>
+    <div align="center" style="margin-top:0px">
     <el-table
     v-loading="listLoading"
     ref="singleTable"
@@ -158,7 +157,7 @@
 
 
   </el-table>
-</div>
+  </div>
   </div>
 </template>
 
@@ -167,6 +166,12 @@
   /*.living {*/
     /*background: transparent url(../../../static/images/live.gif) no-repeat 99% 5%;*/
   /*}*/
+  .el-divider--horizontal{
+    margin: 8px 0;
+  }
+  .top{
+    height: 25px;
+  }
   .ftscore{
     color: #6d6d73;
     text-align: center;
