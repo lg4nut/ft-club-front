@@ -1,6 +1,22 @@
 <template>
+  <div>
   <div align="center">
-  <el-table
+    <el-form :inline="true" :model="formInline" class="demo-form-inline"  label-width="80px" size="mini">
+      <el-form-item class="el-icon-user">
+        <i class="el-icon-user"></i>
+        <el-input v-model="formInline.user" placeholder="账号/手机号/邮箱"></el-input>
+      </el-form-item>
+      <el-form-item label="密码">
+        <i class="el-icon-lock"></i>
+        <el-input v-model="formInline.user" placeholder="密码"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">登陆</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+    <div align="center">
+    <el-table
     v-loading="listLoading"
     ref="singleTable"
     :data="fixtures"
@@ -143,7 +159,7 @@
 
   </el-table>
 </div>
-
+  </div>
 </template>
 
 <style>
@@ -393,6 +409,10 @@
 
       data() {
         return {
+          formInline: {
+            user: '',
+            region: ''
+          },
           listLoading: false,
           fixtures: [],
           show:true,
