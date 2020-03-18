@@ -10,6 +10,8 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">登陆</el-button>
+           <el-link type="danger">免费注册</el-link>
+        ｜<el-link href="https://www.163.com" target="_blank">忘记密码</el-link>
       </el-form-item>
     </el-form>
   </div>
