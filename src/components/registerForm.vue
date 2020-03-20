@@ -1,13 +1,13 @@
 <template>
-   {{msg}}
+  <h1>{{ msg }}</h1>
 </template>
 
 <script>
     export default {
-        name: "registerForm",
+      name: "registerForm",
       data () {
         return {
-          msg: 'Welcome to Your Vue.js App'
+          msg: 'register'
         }}
     }
 </script>
