@@ -9,14 +9,14 @@ import VueSocketIO from 'vue-socket.io'
 // import store from './store'
 
  // let connectionString = 'http://39.108.130.210:8866';
-let connectionString = 'http://localhost:8866';
+//let connectionString = 'http://localhost:8866';
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 Vue.use(new VueSocketIO({
   debug: true,
   // 服务器端地址
-  // connection: 'http://39.108.130.210:8866',
-  connection: connectionString,
+   connection: 'http://39.108.130.210:8866',
+  //connection: connectionString,
   vuex: {
     // store,
     // actionPrefix: 'SOCKET_',
