@@ -16,6 +16,11 @@ export default new Router({
       component:()=>import('@/components/index5'),
       name:'inplay'
     },
+    {
+      path:'/regis',
+      component:()=>import('@/components/registerForm'),
+      name:'regis'
+    },
   ]
 })
 

@@ -1,6 +1,23 @@
 <template>
-  <div align="center">
-  <el-table
+  <div>
+  <div align="center" class="top">
+    <el-form :inline="true" :model="formInline" class="demo-form-inline"  label-width="100px" size="mini">
+      <i class="el-icon-user"></i><el-form-item>
+        <el-input v-model="formInline.user" placeholder="账号/手机号/邮箱"></el-input>
+      </el-form-item>
+      <i class="el-icon-lock"></i><el-form-item>
+        <el-input v-model="formInline.user" placeholder="密码"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">登陆</el-button>
+           <el-link type="danger">免费注册</el-link>
+        ｜<el-link href="https://www.163.com" target="_blank">忘记密码</el-link>
+      </el-form-item>
+    </el-form>
+  </div>
+    <el-divider></el-divider>
+    <div align="center" style="margin-top:0px">
+    <el-table
     v-loading="listLoading"
     ref="singleTable"
     :data="fixtures"
@@ -142,8 +159,8 @@
 
 
   </el-table>
-</div>
-
+  </div>
+  </div>
 </template>
 
 <style>
@@ -151,6 +168,12 @@
   /*.living {*/
     /*background: transparent url(../../../static/images/live.gif) no-repeat 99% 5%;*/
   /*}*/
+  .el-divider--horizontal{
+    margin: 8px 0;
+  }
+  .top{
+    height: 25px;
+  }
   .ftscore{
     color: #6d6d73;
     text-align: center;
@@ -392,6 +415,10 @@
 
       data() {
         return {
+          formInline: {
+            user: '',
+            region: ''
+          },
           listLoading: false,
           fixtures: [],
           show:true,
