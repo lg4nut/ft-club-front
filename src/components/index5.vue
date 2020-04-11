@@ -321,23 +321,21 @@
         getFixtures().then((response) => {
           //this.total = res.data.total;
           this.fixtures = response.items;
-          this.fixtures.unshift(this.fixture);
-          this.fixtures.unshift(this.fixture2);
-          this.fixtures.unshift(this.fixture3);
-          this.fixtures.unshift(this.fixture4);
-          this.fixtures.unshift(this.fixture5);
-          this.fixtures.unshift(this.fixture6);
-          this.fixtures.unshift(this.fixture7);
-          this.fixtures.unshift(this.fixture8);
-          this.fixtures.unshift(this.fixture9);
-          this.fixtures.unshift(this.fixture10);
-          this.fixtures.unshift(this.fixture11);
-          this.fixtures.unshift(this.fixture12);
-          this.fixtures.unshift(this.fixture13);
-          this.fixtures.unshift(this.fixture14);
-          this.fixtures.unshift(this.fixture15);
-          this.fixtures.unshift(this.fixture16);
-          this.fixtures.unshift(this.fixture17);
+          this.fixtures.push(this.fixture);
+          this.fixtures.push (this.fixture2);
+          this.fixtures.push(this.fixture3);
+          this.fixtures.push(this.fixture4);
+          this.fixtures.push(this.fixture5);
+          // this.fixtures.push(this.fixture6);
+          // this.fixtures.push(this.fixture7);
+          // this.fixtures.push(this.fixture8);
+          // this.fixtures.push(this.fixture11);
+          // this.fixtures.unshift(this.fixture12);
+          // this.fixtures.unshift(this.fixture13);
+          // this.fixtures.unshift(this.fixture14);
+          // this.fixtures.unshift(this.fixture15);
+          // this.fixtures.unshift(this.fixture16);
+          // this.fixtures.unshift(this.fixture17);
 
 
 
@@ -345,6 +343,7 @@
         });
       },
       timestampToTime(timestamp) {
+        if(timestamp)
         var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
         Y = date.getFullYear() + '-';
         M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
@@ -400,7 +399,7 @@
           cardCount:0,
           fixture: {
             away_value: 1.91,
-            begintime: 1578745800000,
+            begintime:1578745800000,
             ft_score: "1-1",
             handicap: "-2.25",
             home_value: 1.89,
@@ -455,101 +454,11 @@
           fixture4:{
             away_value: 1.91,
             begintime: 1578745800000,
-            ft_score: "1-0",
+            ft_score: "1-1",
             handicap: "-2.25",
             home_value: 1.89,
-            ht_score: "1-0",
+            ht_score: "0-0",
             fixture_id: 10003,
-            league: "英超",
-            localteam: "埃弗顿",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "布莱顿"
-          },
-          fixture5:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "3-0",
-            handicap: "-2.25",
-            home_value: 1.83,
-            ht_score: "2-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "切尔西",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "伯恩利"
-          },
-          fixture6:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "0-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10005,
-            league: "英超",
-            localteam: "托特纳姆热刺",
-            over_value: "1.94",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "利物浦"
-          },
-          fixture7:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10006,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture8:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10007,
-            league: "意甲",
-            localteam: "卡利亚里",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "AC米兰"
-          },
-          fixture9:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10008,
             league: "意甲",
             localteam: "拉齐奥",
             over_value: "1.97",
@@ -560,14 +469,14 @@
             under_value: "1.86",
             visitorteam: "那不勒斯"
           },
-          fixture10:{
+          fixture5:{
             away_value: 1.91,
             begintime: 1578745800000,
             ft_score: "1-1",
             handicap: "-2.25",
             home_value: 1.89,
             ht_score: "0-0",
-            fixture_id: 10009,
+            fixture_id: 10004,
             league: "意甲",
             localteam: "国际米兰",
             over_value: "1.97",
@@ -577,319 +486,7 @@
             total: "2.75",
             under_value: "1.86",
             visitorteam: "亚特兰大"
-          },
-          fixture11:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10010,
-            league: "意甲",
-            localteam: "乌迪内斯",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "森索罗"
-          },
-          fixture12:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10011,
-            league: "意甲",
-            localteam: "佛罗伦萨",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "史帕尔"
-          },
-          fixture13:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10012,
-            league: "意甲",
-            localteam: "桑普多利亚",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "布雷西亚"
-          },
-          fixture14:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10013,
-            league: "意甲",
-            localteam: "都灵",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "博洛尼亚"
-          },
-          fixture15:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10014,
-            league: "意甲",
-            localteam: "维罗纳",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "热那亚"
-          },
-          fixture16:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10015,
-            league: "意甲",
-            localteam: "罗马",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "尤文图斯"
-          },
-          fixture17:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10016,
-            league: "意甲",
-            localteam: "帕尔马",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "莱切"
-          },
-          fixture18:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture19:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture20:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture21:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture22:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture23:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture24:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture25:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture26:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
-          },
-          fixture27:{
-            away_value: 1.91,
-            begintime: 1578745800000,
-            ft_score: "1-1",
-            handicap: "-2.25",
-            home_value: 1.89,
-            ht_score: "0-0",
-            fixture_id: 10004,
-            league: "英超",
-            localteam: "狼队",
-            over_value: "1.97",
-            round: "6",
-            stage: "测试",
-            state: "demo",
-            total: "2.75",
-            under_value: "1.86",
-            visitorteam: "纽卡斯尔"
           }
-
-
-
-
-
-
         }
       },
       mounted() {

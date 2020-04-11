@@ -7,7 +7,6 @@ import App from './App'
 import router from './router'
 import VueSocketIO from 'vue-socket.io'
 // import store from './store'
-
  // let connectionString = 'http://39.108.130.210:8866';
 let connectionString = 'http://localhost:8866';
 Vue.use(ElementUI);
